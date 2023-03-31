@@ -9,22 +9,18 @@ specifiers:
   autoprefixer: ^10.0.2
   daisyui: ^2.50.0
   libphonenumber-js: ^1.10.24
-  postcss: '>=8.4.21 <9.0.0'
-  preact: ^10.6.5
   tailwindcss: ^3.0.24
 
 dependencies:
   '@astrojs/netlify': 2.2.0_astro@2.1.8
-  '@astrojs/preact': 2.1.0_preact@10.13.2
+  '@astrojs/preact': 2.1.0
   '@astrojs/tailwind': 3.1.1_pr2kzjolvxvlrb4p5jat5yxnoe
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.0
   astro: 2.1.8
-  autoprefixer: 10.4.14_postcss@8.4.21
-  daisyui: 2.51.5_j7yt3jd32cwenjqavrrga47yr4
+  autoprefixer: 10.4.14
+  daisyui: 2.51.5_autoprefixer@10.4.14
   libphonenumber-js: 1.10.24
-  postcss: 8.4.21
-  preact: 10.13.2
-  tailwindcss: 3.3.0_postcss@8.4.21
+  tailwindcss: 3.3.0
 
 packages:
 
@@ -96,7 +92,7 @@ packages:
       esbuild: 0.15.18
     dev: false
 
-  /@astrojs/preact/2.1.0_preact@10.13.2:
+  /@astrojs/preact/2.1.0:
     resolution: {integrity: sha512-1AnXpnjC24/mWJyq+EN5DoWp+w9Hg/y3dwFX3728rlBhyuY573jx+4+VHuG/g0A1alzJuIAhSPtqCP0YQktUnw==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
@@ -104,10 +100,9 @@ packages:
     dependencies:
       '@babel/core': 7.21.3
       '@babel/plugin-transform-react-jsx': 7.21.0_@babel+core@7.21.3
-      '@preact/signals': 1.1.3_preact@10.13.2
+      '@preact/signals': 1.1.3
       babel-plugin-module-resolver: 5.0.0
-      preact: 10.13.2
-      preact-render-to-string: 5.2.6_preact@10.13.2
+      preact-render-to-string: 5.2.6
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -130,7 +125,7 @@ packages:
       autoprefixer: 10.4.14_postcss@8.4.21
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
-      tailwindcss: 3.3.0_postcss@8.4.21
+      tailwindcss: 3.3.0
     transitivePeerDependencies:
       - ts-node
     dev: false
@@ -706,13 +701,12 @@ packages:
     resolution: {integrity: sha512-Kui4p7PMcEQevBgsTO0JBo3gyQ88Q3qzEvsVCuSp11t0JcN4DmGCTJcGRVSCq7Bn7lGxJBO+57jNSzDoDJ+QmA==}
     dev: false
 
-  /@preact/signals/1.1.3_preact@10.13.2:
+  /@preact/signals/1.1.3:
     resolution: {integrity: sha512-N09DuAVvc90bBZVRwD+aFhtGyHAmJLhS3IFoawO/bYJRcil4k83nBOchpCEoS0s5+BXBpahgp0Mjf+IOqP57Og==}
     peerDependencies:
       preact: 10.x
     dependencies:
       '@preact/signals-core': 1.2.3
-      preact: 10.13.2
     dev: false
 
   /@proload/core/0.3.3:
@@ -731,7 +725,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.0_postcss@8.4.21
+      tailwindcss: 3.3.0
     dev: false
 
   /@types/babel__core/7.20.0:
@@ -967,6 +961,21 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: false
+
+  /autoprefixer/10.4.14:
+    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+    dependencies:
+      browserslist: 4.21.5
+      caniuse-lite: 1.0.30001472
+      fraction.js: 4.2.0
+      normalize-range: 0.1.2
+      picocolors: 1.0.0
+      postcss-value-parser: 4.2.0
     dev: false
 
   /autoprefixer/10.4.14_postcss@8.4.21:
@@ -1258,18 +1267,17 @@ packages:
     hasBin: true
     dev: false
 
-  /daisyui/2.51.5_j7yt3jd32cwenjqavrrga47yr4:
+  /daisyui/2.51.5_autoprefixer@10.4.14:
     resolution: {integrity: sha512-L05dRw0tasmz2Ha+10LhftEGLq4kaA8vRR/T0wDaXfHwqcgsf81jfXDJ6NlZ63Z7Rl1k3rj7UHs0l0p7CM3aYA==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
     dependencies:
-      autoprefixer: 10.4.14_postcss@8.4.21
+      autoprefixer: 10.4.14
       color: 4.2.3
       css-selector-tokenizer: 0.8.0
-      postcss: 8.4.21
-      postcss-js: 4.0.1_postcss@8.4.21
-      tailwindcss: 3.3.0_postcss@8.4.21
+      postcss-js: 4.0.1
+      tailwindcss: 3.3.0
     transitivePeerDependencies:
       - ts-node
     dev: false
@@ -2868,6 +2876,15 @@ packages:
       resolve: 1.22.1
     dev: false
 
+  /postcss-js/4.0.1:
+    resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
+    engines: {node: ^12 || ^14 || >= 16}
+    peerDependencies:
+      postcss: ^8.4.21
+    dependencies:
+      camelcase-css: 2.0.1
+    dev: false
+
   /postcss-js/4.0.1_postcss@8.4.21:
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
     engines: {node: ^12 || ^14 || >= 16}
@@ -2951,17 +2968,12 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /preact-render-to-string/5.2.6_preact@10.13.2:
+  /preact-render-to-string/5.2.6:
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
     peerDependencies:
       preact: '>=10'
     dependencies:
-      preact: 10.13.2
       pretty-format: 3.8.0
-    dev: false
-
-  /preact/10.13.2:
-    resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==}
     dev: false
 
   /preferred-pm/3.0.3:
@@ -3422,12 +3434,10 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /tailwindcss/3.3.0_postcss@8.4.21:
+  /tailwindcss/3.3.0:
     resolution: {integrity: sha512-hOXlFx+YcklJ8kXiCAfk/FMyr4Pm9ck477G0m/us2344Vuj355IpoEDB5UmGAsSpTBmr+4ZhjzW04JuFXkb/fw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
-    peerDependencies:
-      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
