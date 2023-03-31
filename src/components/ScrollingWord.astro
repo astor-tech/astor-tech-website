@@ -1,0 +1,33 @@
+---
+export interface Props {
+  words: string[];
+}
+const { words } = Astro.props;
+---
+
+<div class="h-10 sm:h-14 overflow-hidden inline-block text-3xl sm:text-5xl font-bold sm:px-2">
+  <ul class="animate-scroll-up p-0 m-1 text-primary">
+    {words.map((word) => <li class="flex align-bottom h-10 sm:h-14 list-none">{word}</li>)}
+    <li class="flex align-bottom h-10 sm:h-14 list-none">{words[0]}</li>
+  </ul>
+</div>
+<style is:global>
+  /* .scrolling-words-box {
+    height: 3rem;
+    margin: auto;
+    overflow: hidden;
+
+    ul {
+      margin: 0 0.625rem;
+      padding: 0;
+      animation: scrollUp 4s infinite;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 3rem;
+        list-style: none;
+      }
+    }
+  } */
+</style>

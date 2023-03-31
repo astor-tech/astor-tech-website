@@ -1,0 +1,25 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Welcome from '~/components/Welcome.astro';
+import ContactForm from '~/components/ContactForm.astro';
+---
+
+<Layout title="Astor Technologies">
+  <div class="hero">
+    <div class="hero-content flex-col lg:flex-row">
+      <div class="text-center lg:text-left max-w-lg lg:max-w-3xl">
+        <h1 class="text-4xl font-bold">Contact us</h1>
+        <p class="py-6">
+          We'd love to hear about your project and how we can help, or maybe you just have a
+          question about some of the services we provide.
+        </p>
+        <p>Either way, we'd love to hear from you!</p>
+      </div>
+      <div class="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+        <div class="card-body">
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import ScrollingWord from './ScrollingWord.astro';
+---
+
+<div class="hero lg:px-32">
+  <div class="hero-content flex-col lg:flex-row">
+    <img src="/headshot.jpg" class="w-48 sm:w-64 rounded-full shadow-2xl" />
+    <div class="p-4">
+      <div class="sm:flex sm:flex-row">
+        <div class="flex flex-grow-0 h-10 sm:h-14 sm:items-center sm:whitespace-nowrap">
+          <h1 class="text-3xl sm:text-5xl font-bold">Your trusted</h1>
+        </div>
+        <ScrollingWord words={['software', 'technology', 'development', 'solutions']} />
+        <div class="flex flex-grow h-10 sm:h-14 sm:items-center sm:whitespace-nowrap">
+          <h1 class="text-3xl sm:text-5xl font-bold">partner</h1>
+        </div>
+      </div>
+      <p class="pt-6 text-lg">
+        <strong>Astor Technologies</strong> operates with a single purpose - to help our clients achieve
+        their goals with cutting edge technology and software solutions.
+      </p>
+      <p class="py-6 text-lg">Become our partner, and let's build something amazing together!</p>
+      <a href="/services" class="btn btn-ghost btn-outline btn-block sm:btn-md sm:btn-wide mb-4"
+        >Our services</a
+      >
+      <a href="/contact" class="btn btn-primary btn-block sm:btn-md sm:btn-wide">Contact us</a>
+    </div>
+  </div>
+</div>

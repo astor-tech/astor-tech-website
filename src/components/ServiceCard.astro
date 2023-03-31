@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+  message: string;
+}
+const { title, message } = Astro.props;
+---
+
+<div class="card w-72 max-w-xs bg-base-100 shadow-xl">
+  <figure class="px-10 pt-10">
+    <!-- <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" /> -->
+
+    <slot name="icon" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="card-title">{title}</h2>
+    <p>{message}</p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+---
+export interface Props {
+  label: string;
+  name: string;
+  type?: 'text' | 'email' | 'tel';
+  placeholder?: string;
+  autofocus?: boolean;
+  maxlength?: string;
+}
+const { label, type = 'text', name, placeholder, autofocus = false, maxlength } = Astro.props;
+---
+
+<div class="m-auto form-control w-full max-w-md my-2">
+  <label class="label">
+    <span class="label-text">{label}</span>
+    <!-- {optional && <span class="label-text-alt">(Optional)</span>} -->
+  </label>
+  <input
+    autofocus={autofocus}
+    type={type}
+    name={name}
+    placeholder={placeholder}
+    maxlength={maxlength}
+    class="input input-bordered w-full max-w-md"
+  />
+  <!-- <label class="label">
+    {error && <span class={`label-text-alt ${errorCls}`}>{error}</span>}
+  </label> -->
+</div>

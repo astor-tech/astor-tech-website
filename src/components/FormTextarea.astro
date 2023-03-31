@@ -1,0 +1,23 @@
+---
+export interface Props {
+  label: string;
+  name: string;
+  placeholder?: string;
+}
+const { label, name, placeholder } = Astro.props;
+---
+
+<div class="m-auto form-control w-full max-w-md">
+  <label class="label">
+    <span class="label-text">{label}</span>
+    <!-- {optional && <span class="label-text-alt">(Optional)</span>} -->
+  </label>
+  <textarea
+    name={name}
+    placeholder={placeholder}
+    wrap="soft"
+    class="textarea textarea-bordered w-full max-w-md"></textarea>
+  <!-- <label class="label">
+    {error && <span class={`label-text-alt ${errorCls}`}>{error}</span>}
+  </label> -->
+</div>

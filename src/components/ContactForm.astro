@@ -1,0 +1,46 @@
+---
+import FormInput from './FormInput.astro';
+import FormTextarea from './FormTextarea.astro';
+---
+
+<form
+  class="m-auto max-w-lg w-full"
+  netlify
+  netlify-honeypot
+  name="contact"
+  method="POST"
+  action="/success"
+>
+  <p class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </p>
+  <FormInput autofocus name="name" label="Name" placeholder="Bruce Wayne" />
+  <FormInput name="email" type="email" label="Email" placeholder="h8bats@wayne.org" />
+  <FormInput name="phone" type="tel" maxlength="14" label="Phone" placeholder="(123) 456-7890" />
+  <FormTextarea name="message" label="Message" placeholder="Message" />
+  <button class="btn bg-primary btn-block my-6" type="submit"> Submit</button>
+</form>
+
+<script>
+  // Format phone number as user types
+  import { AsYouType } from 'libphonenumber-js';
+  const el = document.getElementsByName('phone')[0];
+  let prevValue = '';
+  el.addEventListener('input', (e) => {
+    let newValue = e.target?.value;
+
+    if (newValue[0] === '1') {
+      el.value = '';
+      return;
+    }
+
+    // Skip formatting if the user is deleting
+    if (newValue.length > prevValue.length) {
+      newValue = new AsYouType('US').input(newValue);
+    }
+    el.value = newValue;
+    prevValue = newValue;
+  });
+</script>
