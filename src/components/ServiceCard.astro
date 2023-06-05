@@ -1,7 +1,7 @@
 ---
 export interface Props {
   title: string;
-  message: string;
+  message?: string;
 }
 const { title, message } = Astro.props;
 ---
@@ -12,8 +12,11 @@ const { title, message } = Astro.props;
 
     <slot name="icon" />
   </figure>
-  <div class="card-body items-center text-center">
-    <h2 class="card-title">{title}</h2>
-    <p>{message}</p>
+  <div class="card-body items-center">
+    <div class="flex flex-col items-center text-cente gap-4">
+      <h2 class="card-title">{title}</h2>
+      {message && <p>{message}</p>}
+    </div>
+    <slot />
   </div>
 </div>

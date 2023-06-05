@@ -7,29 +7,98 @@ import Layout from '~/layouts/Layout.astro';
   <div class="flex flex-col flex-grow items-center p-6">
     <h1 class="text-4xl font-bold py-4">Our Services</h1>
     <div class="pb-4 text-center w-auto max-w-lg md:max-w-3xl">
-      We offer a wide range of services, always tailored to meet the needs of our unique clients.
-      Just let us know what you need and we will work with you to find the best solution.
+      We offer a wide range of services, always tailored to meet the needs of our unique clients. Just let us know what
+      you need and we will work with you to find the best solution.
     </div>
     <a href="/contact" class="btn btn-primary btn-wide mb-4">Contact us</a>
 
     <div class="flex gap-8 flex-col md:flex-row flex-wrap justify-center">
       <ServiceCard
-        title="Mobile Apps"
-        message="Whether it's for the app store or internal business use, we can help you design and build it, from the ground up."
-      >
+        title="Web and Mobile Apps"
+        message="Whether it's for the app store or just internal business use, we can design and build your app from the ground up based on your vision.">
         <img slot="icon" src="/app.svg" alt="Apps" class="max-w-xs" />
+        <div class="pt-2 flex flex-col gap-2 w-full">
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">iOS and Android Apps</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">Admin Dashboards</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">Custom Apps</div>
+          </div>
+        </div>
       </ServiceCard>
       <ServiceCard
-        title="Websites"
-        message="Every business needs a web presence. We can help you build a website that will help you grow your business."
-      >
+        title="Websites and SEO"
+        message="Every business needs a web presence. We can help you build a website that will help you grow your business or brand.">
         <img slot="icon" src="/web.svg" alt="Web" class="max-w-xs" />
+        <div class="pt-2 flex flex-col gap-2 w-full">
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">Landing Pages</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">Brochure Sites</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">E-Commerce</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">SEO</div>
+          </div>
+        </div>
       </ServiceCard>
       <ServiceCard
         title="Consulting"
-        message="Let us come alongside you and help you design and implement a solution, at any stage of the process"
-      >
+        message="Let us come alongside you and help you design and implement a solution, at any stage of the process">
         <img slot="icon" src="/idea.svg" alt="Consult" class="max-w-xs" />
+        <div class="pt-2 flex flex-col gap-2 w-full">
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">System Architecture</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">Performance</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">Scalability</div>
+          </div>
+          <div class="flex gap-2 color-prim">
+            <div class="w-6">
+              <img src="/checkbox.svg" alt="check" class="max-w-xs" />
+            </div>
+            <div class="flex-grow">Refactor and Redesign</div>
+          </div>
+        </div>
       </ServiceCard>
     </div>
   </div>
